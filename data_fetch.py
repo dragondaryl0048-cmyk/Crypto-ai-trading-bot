@@ -32,7 +32,7 @@ def _get(url, params=None, retries=4):
 
         last_status = resp.status_code
         if resp.status_code == 429 and attempt < retries:
-            time.sleep(3 + attempt * 3)  # back off longer each retry
+            time.sleep(3 + attempt * 3)
             continue
         break
 
